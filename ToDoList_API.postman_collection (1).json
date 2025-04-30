@@ -1,0 +1,164 @@
+{
+  "info": {
+    "name": "ToDo List API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create ToDo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Sample ToDo\",\n  \"description\": \"Example description\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/todo",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "todo"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Read All ToDos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/todo",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "todo"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Count All ToDos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/todo/count",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "todo",
+            "count"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Read Paginated ToDos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/todo/0/10",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "todo",
+            "0",
+            "10"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Read ToDo by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/todo/1",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "todo",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Mark ToDo Complete",
+      "request": {
+        "method": "PUT",
+        "url": {
+          "raw": "http://localhost:8080/api/todo/1/markcomplete",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "todo",
+            "1",
+            "markcomplete"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update ToDo",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Title\",\n  \"description\": \"Updated Description\",\n  \"completed\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/todo/1",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "todo",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete ToDo",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/api/todo/1",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "todo",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
